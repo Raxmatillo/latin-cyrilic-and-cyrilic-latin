@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Lotin ->  Kiril{% endblock %}
+{% block content %}
+{% load static %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form class="form-floating" method="POST">
+            {% csrf_token %}
+            <textarea type="text" class="form-control" name="latin" id="output1" style="height: 60vh">{{ latin }}</textarea>
+            <label for="floatingTextarea">Lotincha matn</label>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-primary my-3 w-25 mr-auto" type="submit">Lotin -> Kiril</button>
+              <button class="btn btn-danger my-3 w-25" type="button" value="Clear" onclick="javascript:eraseText();">Tozalash</button>
+            </div>
+          </form>    
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <textarea class="form-control" {% if latin %} {% else %}disabled{% endif %} placeholder="Leave a comment here" name="cyrillic" id="output2" style="height: 60vh">{{ cyrillic }}</textarea>
+            <label for="floatingTextarea2">Kirilcha yozuvda</label>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

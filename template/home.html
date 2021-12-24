@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Bosh sahifa{% endblock %}
+{% block content %}
+<body> 
+    <div class="container">
+      <div class="justify-content-center">
+        <div class="card w-50 mycard" style="height: 30vh;left:50%; top: 50%; transform: translate(-50%, 50%);">
+          <div class="card-body mx-auto">
+            <h5 class="card-title">Assalomu alaykum! Saytimizga Xush Kelibsiz!</h5>
+            <p class="card-text">Lotin ->  Kiril va Kiril -> Lotin <br>Endi siz bemalol lotin yozuvidagi matnlarni kril alifbosiga
+            va askincha o'zgartira olasiz.</p>
+            <div class="">
+              <a href="{% url 'tocyrillic' %}"  class="card-link" style="text-decoration:none">Lotin -> Kiril</a>
+              <a href="{% url 'tolatin' %}" class="card-link" style="text-decoration:none">Kiril -> Lotin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock %}
