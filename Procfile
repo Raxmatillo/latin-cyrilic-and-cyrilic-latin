@@ -1,0 +1,1 @@
+web: gunicorn congif.wsgi --log-file -
